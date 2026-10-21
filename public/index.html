@@ -332,6 +332,8 @@
     height: 100%;
     object-fit: cover;
     object-position: center;
+    transform-origin: 52% 50%;
+    animation: pgv-pet-breathe 9s ease-in-out infinite alternate;
   }
 
   .pgv-site .pgv-hero-inset {
@@ -344,6 +346,7 @@
     border-radius: 50%;
     aspect-ratio: 1;
     box-shadow: 0 18px 36px rgba(80, 55, 43, 0.2);
+    animation: pgv-cat-float 5.5s ease-in-out infinite;
   }
 
   .pgv-site .pgv-hero-inset img {
@@ -549,10 +552,10 @@
   .pgv-site .pgv-category-card {
     position: relative;
     display: flex;
-    min-height: 248px;
+    min-height: 296px;
     flex-direction: column;
     align-items: flex-start;
-    padding: 26px;
+    padding: 0;
     overflow: hidden;
     border: 1px solid var(--pgv-line);
     border-radius: var(--pgv-radius-md);
@@ -592,26 +595,56 @@
     background: var(--pgv-blush);
   }
 
+  .pgv-site .pgv-category-photo {
+    width: 100%;
+    height: 132px;
+    margin: 0;
+    overflow: hidden;
+    background: var(--pgv-sand);
+  }
+
+  .pgv-site .pgv-category-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.45s ease;
+  }
+
+  .pgv-site .pgv-category-card:hover .pgv-category-photo img {
+    transform: scale(1.04);
+  }
+
+  .pgv-site .pgv-category-body {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    width: 100%;
+    flex: 1;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 18px 22px 22px;
+  }
+
   .pgv-site .pgv-category-icon {
     display: grid;
-    width: 54px;
-    height: 54px;
+    width: 43px;
+    height: 43px;
     place-items: center;
-    margin-bottom: auto;
-    border-radius: 17px;
+    margin-bottom: 0;
+    border-radius: 13px;
     background: rgba(255, 253, 249, 0.75);
     color: var(--pgv-terracotta-dark);
   }
 
   .pgv-site .pgv-category-icon svg {
-    width: 29px;
-    height: 29px;
+    width: 24px;
+    height: 24px;
   }
 
   .pgv-site .pgv-category-name {
     position: relative;
     z-index: 1;
-    margin: 26px 0 5px;
+    margin: 14px 0 5px;
     color: var(--pgv-ink);
     font-family: var(--pgv-serif);
     font-size: 1.24rem;
@@ -631,6 +664,8 @@
 
   .pgv-site .pgv-category-card--future {
     justify-content: center;
+    min-height: 296px;
+    padding: 26px;
     border-style: dashed;
     background: transparent;
   }
@@ -1053,8 +1088,16 @@
     }
 
     .pgv-site .pgv-category-card {
-      min-height: 222px;
-      padding: 20px;
+      min-height: 254px;
+      padding: 0;
+    }
+
+    .pgv-site .pgv-category-photo {
+      height: 104px;
+    }
+
+    .pgv-site .pgv-category-body {
+      padding: 15px 16px 18px;
     }
 
     .pgv-site .pgv-category-icon {
@@ -1069,7 +1112,7 @@
     }
 
     .pgv-site .pgv-category-name {
-      margin-top: 22px;
+      margin-top: 12px;
       font-size: 1.08rem;
     }
 
@@ -1119,7 +1162,27 @@
 
     .pgv-site .pgv-category-card {
       min-height: 190px;
+      padding: 20px;
     }
+
+    .pgv-site .pgv-category-card:not(.pgv-category-card--future) {
+      min-height: 254px;
+      padding: 0;
+    }
+
+    .pgv-site .pgv-category-card:not(.pgv-category-card--future) .pgv-category-body {
+      padding: 15px 16px 18px;
+    }
+  }
+
+  @keyframes pgv-pet-breathe {
+    from { transform: scale(1.01) translate3d(0, 0, 0); }
+    to { transform: scale(1.045) translate3d(-0.6%, -0.4%, 0); }
+  }
+
+  @keyframes pgv-cat-float {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-7px) rotate(0.8deg); }
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -1154,7 +1217,6 @@
           <li><a class="pgv-nav-link" href="/" aria-current="page">Home</a></li>
           <li><a class="pgv-nav-link" href="#reviews">Reviews</a></li>
           <li><a class="pgv-nav-link" href="/about/">About</a></li>
-          <li><a class="pgv-nav-link" href="/affiliate-disclosure/">Disclosure</a></li>
           <li><a class="pgv-nav-link" href="/privacy-policy/">Privacy Policy</a></li>
         </ul>
       </nav>
@@ -1268,6 +1330,10 @@
 
         <div class="pgv-category-grid">
           <a class="pgv-category-card" href="/reviews/#grooming">
+            <figure class="pgv-category-photo">
+              <img src="https://images.unsplash.com/photo-1719752585472-ddc1cc7edbf6?auto=format&amp;fit=crop&amp;w=800&amp;q=75" alt="A cat resting comfortably while being held" width="800" height="600" loading="lazy">
+            </figure>
+            <div class="pgv-category-body">
             <span class="pgv-category-icon" aria-hidden="true">
               <svg viewBox="0 0 32 32" fill="none">
                 <path d="M20.6 5.6 26.4 11.4 15.9 21.9l-5.8-5.8L20.6 5.6Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
@@ -1277,9 +1343,14 @@
             </span>
             <span class="pgv-category-name">Grooming Brushes</span>
             <span class="pgv-category-desc">Comfort, coat fit, and easier cleanup.</span>
+            </div>
           </a>
 
           <a class="pgv-category-card" href="/reviews/#litter">
+            <figure class="pgv-category-photo">
+              <img src="https://images.unsplash.com/photo-1690950965726-887b05bfa548?auto=format&amp;fit=crop&amp;w=800&amp;q=75" alt="A cat resting on a mat in a bright room" width="800" height="600" loading="lazy">
+            </figure>
+            <div class="pgv-category-body">
             <span class="pgv-category-icon" aria-hidden="true">
               <svg viewBox="0 0 32 32" fill="none">
                 <rect x="4.5" y="8" width="23" height="16" rx="4" stroke="currentColor" stroke-width="1.8"/>
@@ -1288,9 +1359,14 @@
             </span>
             <span class="pgv-category-name">Litter Mats</span>
             <span class="pgv-category-desc">Grip, trapping, and easy washing.</span>
+            </div>
           </a>
 
           <a class="pgv-category-card" href="/reviews/#chew">
+            <figure class="pgv-category-photo">
+              <img src="https://images.unsplash.com/photo-1549297161-14f79605a74c?auto=format&amp;fit=crop&amp;w=800&amp;q=75" alt="A relaxed dog resting on a sofa" width="800" height="600" loading="lazy">
+            </figure>
+            <div class="pgv-category-body">
             <span class="pgv-category-icon" aria-hidden="true">
               <svg viewBox="0 0 32 32" fill="none">
                 <path d="M9.5 10.1a4 4 0 1 0-4.3 6.6 4 4 0 0 1 0 4.8 4 4 0 1 0 4.3 6.6c2.1-1.3 3-4.9 4.9-6.8l3.2-3.2c1.9-1.9 5.5-2.8 6.8-4.9a4 4 0 1 0-6.6-4.3 4 4 0 0 1-4.8 0 4 4 0 1 0-6.6 4.3c1.3 2.1 4.9 3 6.8 4.9l3.2 3.2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
@@ -1299,9 +1375,14 @@
             </span>
             <span class="pgv-category-name">Tough Chew Toys</span>
             <span class="pgv-category-desc">Durability for strong, busy chewers.</span>
+            </div>
           </a>
 
           <a class="pgv-category-card" href="/reviews/#water">
+            <figure class="pgv-category-photo">
+              <img src="https://images.unsplash.com/photo-1643812304497-f4edaddca304?auto=format&amp;fit=crop&amp;w=800&amp;q=75" alt="A dog resting comfortably after time outdoors" width="800" height="600" loading="lazy">
+            </figure>
+            <div class="pgv-category-body">
             <span class="pgv-category-icon" aria-hidden="true">
               <svg viewBox="0 0 32 32" fill="none">
                 <path d="M12 5h8v4l2 3v13a2 2 0 0 1-2 2h-8a2 2 0 0 1-2-2V12l2-3V5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
@@ -1310,9 +1391,14 @@
             </span>
             <span class="pgv-category-name">Outdoor Water Bottles</span>
             <span class="pgv-category-desc">Travel-ready fit and leak control.</span>
+            </div>
           </a>
 
           <a class="pgv-category-card" href="/reviews/#car">
+            <figure class="pgv-category-photo">
+              <img src="https://images.unsplash.com/photo-1518155317743-a8ff43ea6a5f?auto=format&amp;fit=crop&amp;w=800&amp;q=75" alt="A dog looking out from inside a vehicle" width="800" height="600" loading="lazy">
+            </figure>
+            <div class="pgv-category-body">
             <span class="pgv-category-icon" aria-hidden="true">
               <svg viewBox="0 0 32 32" fill="none">
                 <path d="m7 15 2.3-5.1A3 3 0 0 1 12 8h8a3 3 0 0 1 2.7 1.9L25 15M5 15h22v8H5v-8Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
@@ -1322,9 +1408,14 @@
             </span>
             <span class="pgv-category-name">Car Safety Accessories</span>
             <span class="pgv-category-desc">Fit, stability, and travel comfort.</span>
+            </div>
           </a>
 
           <a class="pgv-category-card" href="/reviews/#scratch">
+            <figure class="pgv-category-photo">
+              <img src="https://images.unsplash.com/photo-1636543459630-8975a3548121?auto=format&amp;fit=crop&amp;w=800&amp;q=75" alt="A cat interacting with a scratching post at home" width="800" height="600" loading="lazy">
+            </figure>
+            <div class="pgv-category-body">
             <span class="pgv-category-icon" aria-hidden="true">
               <svg viewBox="0 0 32 32" fill="none">
                 <path d="M7 6h18v20H7V6Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
@@ -1333,9 +1424,14 @@
             </span>
             <span class="pgv-category-name">Cat Scratching Boards</span>
             <span class="pgv-category-desc">Stability, surface wear, and room fit.</span>
+            </div>
           </a>
 
           <a class="pgv-category-card" href="/reviews/#fence">
+            <figure class="pgv-category-photo">
+              <img src="https://images.unsplash.com/photo-1779149414487-864f2974497f?auto=format&amp;fit=crop&amp;w=800&amp;q=75" alt="Two dogs playing in a safely fenced backyard" width="800" height="600" loading="lazy">
+            </figure>
+            <div class="pgv-category-body">
             <span class="pgv-category-icon" aria-hidden="true">
               <svg viewBox="0 0 32 32" fill="none">
                 <path d="M5 9h22v17H5V9Zm7.3 0v17M19.7 9v17M5 17.5h22" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
@@ -1344,6 +1440,7 @@
             </span>
             <span class="pgv-category-name">Fence Accessories</span>
             <span class="pgv-category-desc">Anchors, connectors, and useful add-ons.</span>
+            </div>
           </a>
 
           <!-- Reserved slot for a future, approved hardware category. -->
@@ -1460,13 +1557,6 @@
           </article>
         </div>
 
-        <p class="pgv-review-note">
-          <svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
-            <circle cx="10" cy="10" r="7.5" stroke="currentColor" stroke-width="1.5"/>
-            <path d="M10 9v4.5M10 6.3v.2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
-          </svg>
-          <span>Reader-supported: we may earn a commission when you buy through links on our site, at no extra cost to you. <a href="/affiliate-disclosure/">Read our affiliate disclosure.</a></span>
-        </p>
       </div>
     </section>
   </main>
@@ -1493,7 +1583,7 @@
         <a href="#reviews">Reviews</a>
         <a href="/about/">About</a>
         <a href="#categories">Categories</a>
-        <a href="/affiliate-disclosure/">FTC Affiliate Disclosure</a>
+        <a href="/affiliate-disclosure/">How We Make Money</a>
         <a href="/privacy-policy/">Privacy Policy</a>
       </nav>
     </div>
@@ -1501,7 +1591,7 @@
       <div class="pgv-footer-bottom">
         <span>© 2026 PawGearVerified. All rights reserved.</span>
         <div class="pgv-footer-legal">
-          <a href="/affiliate-disclosure/">FTC Affiliate Disclosure</a>
+          <a href="/affiliate-disclosure/">How We Make Money</a>
           <a href="/privacy-policy/">Privacy Policy</a>
         </div>
       </div>
