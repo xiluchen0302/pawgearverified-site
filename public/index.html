@@ -1,0 +1,1512 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PawGearVerified | Practical Pet Hardware Reviews</title>
+  <meta name="description" content="Independent, practical reviews of cat and dog hardware, including grooming brushes, litter mats, chew toys, travel bottles, car safety accessories, scratching boards, and fence accessories.">
+  <meta name="theme-color" content="#fbf6ee">
+  <meta property="og:title" content="PawGearVerified | Good gear. Happier moments.">
+  <meta property="og:description" content="Practical, independent reviews of pet hardware for real life with cats and dogs.">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/png" href="/assets/pawgearverified-mark.png">
+<!--
+  PawGearVerified — Homepage
+  Paste this entire block into an Elementor HTML widget or a WordPress Custom HTML block.
+  All styles are scoped under .pgv-site to reduce theme conflicts.
+  Replace the Unsplash image URLs with images from the WordPress Media Library before launch.
+-->
+
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap");
+
+  .pgv-site {
+    --pgv-cream: #fbf6ee;
+    --pgv-paper: #fffdf9;
+    --pgv-sand: #f1e3d4;
+    --pgv-blush: #f4ddd2;
+    --pgv-terracotta: #b66d54;
+    --pgv-terracotta-dark: #8f4a35;
+    --pgv-sage: #75826c;
+    --pgv-sage-light: #e6ebe1;
+    --pgv-ink: #302925;
+    --pgv-muted: #6d6159;
+    --pgv-line: #e6d9cd;
+    --pgv-shadow: 0 20px 60px rgba(80, 55, 43, 0.11);
+    --pgv-radius-lg: 34px;
+    --pgv-radius-md: 22px;
+    --pgv-shell: 1180px;
+    --pgv-serif: "Fraunces", Georgia, "Times New Roman", serif;
+    --pgv-sans: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+    width: 100%;
+    overflow: hidden;
+    background: var(--pgv-cream);
+    color: var(--pgv-ink);
+    font-family: var(--pgv-sans);
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .pgv-site,
+  .pgv-site *,
+  .pgv-site *::before,
+  .pgv-site *::after {
+    box-sizing: border-box;
+  }
+
+  .pgv-site img {
+    display: block;
+    width: 100%;
+  }
+
+  .pgv-site a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .pgv-site button,
+  .pgv-site a {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .pgv-site :focus-visible {
+    outline: 3px solid var(--pgv-terracotta-dark);
+    outline-offset: 4px;
+  }
+
+  .pgv-site .pgv-shell {
+    width: min(calc(100% - 40px), var(--pgv-shell));
+    margin-inline: auto;
+  }
+
+  .pgv-site .pgv-skip-link {
+    position: absolute;
+    left: 16px;
+    top: -80px;
+    z-index: 100;
+    padding: 12px 18px;
+    border-radius: 999px;
+    background: var(--pgv-ink);
+    color: #fff;
+    font-weight: 700;
+    transition: top 0.2s ease;
+  }
+
+  .pgv-site .pgv-skip-link:focus {
+    top: 16px;
+  }
+
+  /* Header */
+  .pgv-site .pgv-header {
+    position: relative;
+    z-index: 20;
+    border-bottom: 1px solid rgba(145, 99, 78, 0.14);
+    background: rgba(251, 246, 238, 0.96);
+  }
+
+  .pgv-site .pgv-header-inner {
+    display: flex;
+    min-height: 88px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 28px;
+  }
+
+  .pgv-site .pgv-brand {
+    display: inline-flex;
+    flex-shrink: 0;
+    align-items: center;
+  }
+
+  .pgv-site .pgv-brand-logo {
+    display: block;
+    width: clamp(178px, 18vw, 218px);
+    height: auto;
+  }
+
+  .pgv-site .pgv-nav {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .pgv-site .pgv-nav-list {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 4px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .pgv-site .pgv-nav-link {
+    display: inline-flex;
+    min-height: 44px;
+    align-items: center;
+    padding: 8px 13px;
+    border-radius: 999px;
+    color: var(--pgv-muted);
+    font-size: 0.9rem;
+    font-weight: 600;
+    line-height: 1;
+    transition: color 0.2s ease, background-color 0.2s ease;
+  }
+
+  .pgv-site .pgv-nav-link:hover,
+  .pgv-site .pgv-nav-link[aria-current="page"] {
+    background: var(--pgv-sand);
+    color: var(--pgv-ink);
+  }
+
+  /* Hero */
+  .pgv-site .pgv-hero {
+    position: relative;
+    padding: clamp(70px, 9vw, 118px) 0 clamp(72px, 9vw, 120px);
+  }
+
+  .pgv-site .pgv-hero::before {
+    position: absolute;
+    top: -80px;
+    right: -180px;
+    width: 520px;
+    height: 520px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(230, 235, 225, 0.9) 0%, rgba(230, 235, 225, 0) 71%);
+    content: "";
+    pointer-events: none;
+  }
+
+  .pgv-site .pgv-hero-grid {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 1.03fr) minmax(380px, 0.97fr);
+    align-items: center;
+    gap: clamp(42px, 7vw, 92px);
+  }
+
+  .pgv-site .pgv-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0 0 22px;
+    color: var(--pgv-terracotta-dark);
+    font-size: 0.77rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    line-height: 1.4;
+    text-transform: uppercase;
+  }
+
+  .pgv-site .pgv-eyebrow::before {
+    width: 32px;
+    height: 1px;
+    background: currentColor;
+    content: "";
+  }
+
+  .pgv-site .pgv-hero-title {
+    max-width: 620px;
+    margin: 0;
+    color: var(--pgv-ink);
+    font-family: var(--pgv-serif);
+    font-size: clamp(3.4rem, 6.4vw, 5.4rem);
+    font-weight: 500;
+    letter-spacing: -0.055em;
+    line-height: 0.98;
+    text-wrap: balance;
+  }
+
+  .pgv-site .pgv-hero-title em {
+    color: var(--pgv-terracotta-dark);
+    font-style: italic;
+    font-weight: 500;
+  }
+
+  .pgv-site .pgv-hero-copy {
+    max-width: 600px;
+    margin: 28px 0 0;
+    color: var(--pgv-muted);
+    font-size: clamp(1.03rem, 1.7vw, 1.18rem);
+    line-height: 1.75;
+  }
+
+  .pgv-site .pgv-hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 16px;
+    margin-top: 34px;
+  }
+
+  .pgv-site .pgv-button {
+    display: inline-flex;
+    min-height: 52px;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 13px 24px;
+    border: 1px solid var(--pgv-terracotta-dark);
+    border-radius: 999px;
+    background: var(--pgv-terracotta-dark);
+    color: #fff;
+    font-size: 0.95rem;
+    font-weight: 700;
+    line-height: 1;
+    box-shadow: 0 9px 24px rgba(143, 74, 53, 0.19);
+    transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .pgv-site .pgv-button:hover {
+    transform: translateY(-2px);
+    background: #783c2b;
+    box-shadow: 0 12px 30px rgba(143, 74, 53, 0.25);
+  }
+
+  .pgv-site .pgv-button svg {
+    width: 18px;
+    height: 18px;
+    transition: transform 0.2s ease;
+  }
+
+  .pgv-site .pgv-button:hover svg {
+    transform: translateX(3px);
+  }
+
+  .pgv-site .pgv-proof {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px 20px;
+    margin-top: 30px;
+    color: var(--pgv-muted);
+    font-size: 0.85rem;
+    font-weight: 600;
+  }
+
+  .pgv-site .pgv-proof-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .pgv-site .pgv-proof-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--pgv-sage);
+  }
+
+  .pgv-site .pgv-hero-gallery {
+    position: relative;
+    min-height: 570px;
+    isolation: isolate;
+  }
+
+  .pgv-site .pgv-hero-gallery::before {
+    position: absolute;
+    top: 3%;
+    right: 2%;
+    bottom: 7%;
+    left: 9%;
+    z-index: -1;
+    border-radius: 46% 54% 42% 58% / 45% 38% 62% 55%;
+    background: var(--pgv-sage-light);
+    content: "";
+    transform: rotate(-4deg);
+  }
+
+  .pgv-site .pgv-hero-main-image {
+    position: absolute;
+    inset: 8% 6% 8% 4%;
+    overflow: hidden;
+    border: 8px solid rgba(255, 253, 249, 0.74);
+    border-radius: 46% 54% 44% 56% / 42% 39% 61% 58%;
+    box-shadow: var(--pgv-shadow);
+  }
+
+  .pgv-site .pgv-hero-main-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .pgv-site .pgv-hero-inset {
+    position: absolute;
+    right: -1%;
+    bottom: 6%;
+    width: 39%;
+    overflow: hidden;
+    border: 7px solid var(--pgv-paper);
+    border-radius: 50%;
+    aspect-ratio: 1;
+    box-shadow: 0 18px 36px rgba(80, 55, 43, 0.2);
+  }
+
+  .pgv-site .pgv-hero-inset img {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .pgv-site .pgv-hero-note {
+    position: absolute;
+    top: 8%;
+    left: -1%;
+    display: flex;
+    max-width: 210px;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 16px 12px 12px;
+    border: 1px solid rgba(143, 74, 53, 0.1);
+    border-radius: 18px;
+    background: rgba(255, 253, 249, 0.94);
+    box-shadow: 0 16px 35px rgba(80, 55, 43, 0.12);
+    color: var(--pgv-ink);
+    font-size: 0.79rem;
+    font-weight: 700;
+    line-height: 1.35;
+    backdrop-filter: blur(8px);
+  }
+
+  .pgv-site .pgv-hero-note-icon {
+    display: grid;
+    width: 36px;
+    height: 36px;
+    flex: 0 0 36px;
+    place-items: center;
+    border-radius: 50%;
+    background: var(--pgv-blush);
+    color: var(--pgv-terracotta-dark);
+  }
+
+  .pgv-site .pgv-hero-note svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .pgv-site .pgv-hero-stamp {
+    position: absolute;
+    right: 0;
+    top: 2%;
+    display: grid;
+    width: 108px;
+    height: 108px;
+    place-items: center;
+    border: 1px solid rgba(117, 130, 108, 0.3);
+    border-radius: 50%;
+    background: rgba(255, 253, 249, 0.92);
+    color: var(--pgv-sage);
+    text-align: center;
+    transform: rotate(7deg);
+  }
+
+  .pgv-site .pgv-hero-stamp span {
+    max-width: 75px;
+    font-family: var(--pgv-serif);
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    line-height: 1.25;
+  }
+
+  /* Editorial trust strip */
+  .pgv-site .pgv-trust-strip {
+    background: var(--pgv-ink);
+    color: #fdf8f1;
+  }
+
+  .pgv-site .pgv-trust-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .pgv-site .pgv-trust-item {
+    display: flex;
+    min-height: 105px;
+    align-items: center;
+    gap: 15px;
+    padding: 22px clamp(16px, 3vw, 36px);
+    border-left: 1px solid rgba(255, 255, 255, 0.13);
+  }
+
+  .pgv-site .pgv-trust-item:last-child {
+    border-right: 1px solid rgba(255, 255, 255, 0.13);
+  }
+
+  .pgv-site .pgv-trust-icon {
+    display: grid;
+    width: 44px;
+    height: 44px;
+    flex: 0 0 44px;
+    place-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 50%;
+    color: #f2c9b7;
+  }
+
+  .pgv-site .pgv-trust-icon svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .pgv-site .pgv-trust-item strong {
+    display: block;
+    margin-bottom: 2px;
+    color: #fff;
+    font-size: 0.9rem;
+  }
+
+  .pgv-site .pgv-trust-item span {
+    display: block;
+    color: rgba(255, 255, 255, 0.67);
+    font-size: 0.76rem;
+    line-height: 1.5;
+  }
+
+  /* Shared section styles */
+  .pgv-site .pgv-section {
+    padding: clamp(80px, 10vw, 128px) 0;
+  }
+
+  .pgv-site .pgv-section-heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 28px;
+    margin-bottom: 42px;
+  }
+
+  .pgv-site .pgv-section-kicker {
+    margin: 0 0 10px;
+    color: var(--pgv-terracotta-dark);
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    line-height: 1.4;
+    text-transform: uppercase;
+  }
+
+  .pgv-site .pgv-section-title {
+    max-width: 690px;
+    margin: 0;
+    color: var(--pgv-ink);
+    font-family: var(--pgv-serif);
+    font-size: clamp(2.25rem, 4.4vw, 3.7rem);
+    font-weight: 500;
+    letter-spacing: -0.045em;
+    line-height: 1.05;
+    text-wrap: balance;
+  }
+
+  .pgv-site .pgv-section-intro {
+    max-width: 480px;
+    margin: 18px 0 0;
+    color: var(--pgv-muted);
+    font-size: 0.98rem;
+    line-height: 1.7;
+  }
+
+  .pgv-site .pgv-text-link {
+    display: inline-flex;
+    min-height: 44px;
+    align-items: center;
+    gap: 8px;
+    color: var(--pgv-terracotta-dark);
+    font-size: 0.9rem;
+    font-weight: 700;
+    line-height: 1;
+    white-space: nowrap;
+  }
+
+  .pgv-site .pgv-text-link:hover {
+    color: #6e3525;
+  }
+
+  .pgv-site .pgv-text-link svg {
+    width: 18px;
+    height: 18px;
+    transition: transform 0.2s ease;
+  }
+
+  .pgv-site .pgv-text-link:hover svg {
+    transform: translateX(3px);
+  }
+
+  /* Categories */
+  .pgv-site .pgv-categories {
+    background: var(--pgv-paper);
+  }
+
+  .pgv-site .pgv-category-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .pgv-site .pgv-category-card {
+    position: relative;
+    display: flex;
+    min-height: 248px;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 26px;
+    overflow: hidden;
+    border: 1px solid var(--pgv-line);
+    border-radius: var(--pgv-radius-md);
+    background: var(--pgv-cream);
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+  }
+
+  .pgv-site .pgv-category-card::after {
+    position: absolute;
+    right: -26px;
+    bottom: -38px;
+    width: 112px;
+    height: 112px;
+    border: 1px solid rgba(143, 74, 53, 0.11);
+    border-radius: 50%;
+    content: "";
+    transition: transform 0.25s ease;
+  }
+
+  .pgv-site .pgv-category-card:hover {
+    border-color: rgba(143, 74, 53, 0.36);
+    box-shadow: 0 18px 40px rgba(80, 55, 43, 0.09);
+    transform: translateY(-5px);
+  }
+
+  .pgv-site .pgv-category-card:hover::after {
+    transform: scale(1.14);
+  }
+
+  .pgv-site .pgv-category-card:nth-child(2),
+  .pgv-site .pgv-category-card:nth-child(6) {
+    background: var(--pgv-sage-light);
+  }
+
+  .pgv-site .pgv-category-card:nth-child(3),
+  .pgv-site .pgv-category-card:nth-child(7) {
+    background: var(--pgv-blush);
+  }
+
+  .pgv-site .pgv-category-icon {
+    display: grid;
+    width: 54px;
+    height: 54px;
+    place-items: center;
+    margin-bottom: auto;
+    border-radius: 17px;
+    background: rgba(255, 253, 249, 0.75);
+    color: var(--pgv-terracotta-dark);
+  }
+
+  .pgv-site .pgv-category-icon svg {
+    width: 29px;
+    height: 29px;
+  }
+
+  .pgv-site .pgv-category-name {
+    position: relative;
+    z-index: 1;
+    margin: 26px 0 5px;
+    color: var(--pgv-ink);
+    font-family: var(--pgv-serif);
+    font-size: 1.24rem;
+    font-weight: 600;
+    letter-spacing: -0.025em;
+    line-height: 1.25;
+  }
+
+  .pgv-site .pgv-category-desc {
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    color: var(--pgv-muted);
+    font-size: 0.81rem;
+    line-height: 1.55;
+  }
+
+  .pgv-site .pgv-category-card--future {
+    justify-content: center;
+    border-style: dashed;
+    background: transparent;
+  }
+
+  .pgv-site .pgv-category-card--future .pgv-category-icon {
+    margin: 0 0 20px;
+    background: var(--pgv-sand);
+  }
+
+  .pgv-site .pgv-category-card--future .pgv-category-name {
+    margin-top: 0;
+  }
+
+  .pgv-site .pgv-category-card--future:hover {
+    transform: none;
+  }
+
+  /* Reviews */
+  .pgv-site .pgv-reviews {
+    background:
+      radial-gradient(circle at 4% 12%, rgba(241, 227, 212, 0.85) 0, rgba(241, 227, 212, 0) 26%),
+      var(--pgv-cream);
+  }
+
+  .pgv-site .pgv-review-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  .pgv-site .pgv-review-card {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid var(--pgv-line);
+    border-radius: var(--pgv-radius-md);
+    background: var(--pgv-paper);
+    box-shadow: 0 8px 26px rgba(80, 55, 43, 0.045);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+
+  .pgv-site .pgv-review-card:hover {
+    box-shadow: 0 20px 45px rgba(80, 55, 43, 0.12);
+    transform: translateY(-5px);
+  }
+
+  .pgv-site .pgv-review-image {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 4 / 3;
+    background: var(--pgv-sand);
+  }
+
+  .pgv-site .pgv-review-image img {
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.55s ease;
+  }
+
+  .pgv-site .pgv-review-card:hover .pgv-review-image img {
+    transform: scale(1.035);
+  }
+
+  .pgv-site .pgv-review-tag {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    padding: 8px 12px;
+    border-radius: 999px;
+    background: rgba(255, 253, 249, 0.92);
+    color: var(--pgv-terracotta-dark);
+    font-size: 0.69rem;
+    font-weight: 700;
+    letter-spacing: 0.07em;
+    line-height: 1;
+    text-transform: uppercase;
+    backdrop-filter: blur(6px);
+  }
+
+  .pgv-site .pgv-review-body {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 25px 25px 27px;
+  }
+
+  .pgv-site .pgv-review-meta {
+    margin: 0 0 12px;
+    color: var(--pgv-sage);
+    font-size: 0.73rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    line-height: 1.4;
+    text-transform: uppercase;
+  }
+
+  .pgv-site .pgv-review-title {
+    margin: 0;
+    font-family: var(--pgv-serif);
+    font-size: 1.55rem;
+    font-weight: 600;
+    letter-spacing: -0.035em;
+    line-height: 1.18;
+  }
+
+  .pgv-site .pgv-review-excerpt {
+    margin: 15px 0 22px;
+    color: var(--pgv-muted);
+    font-size: 0.9rem;
+    line-height: 1.68;
+  }
+
+  .pgv-site .pgv-review-body .pgv-text-link {
+    margin-top: auto;
+  }
+
+  .pgv-site .pgv-review-note {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin: 24px 0 0;
+    color: var(--pgv-muted);
+    font-size: 0.78rem;
+    line-height: 1.6;
+  }
+
+  .pgv-site .pgv-review-note svg {
+    width: 17px;
+    height: 17px;
+    flex: 0 0 17px;
+    margin-top: 2px;
+    color: var(--pgv-sage);
+  }
+
+  .pgv-site .pgv-review-note a {
+    color: var(--pgv-terracotta-dark);
+    font-weight: 700;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+  }
+
+  /* Footer */
+  .pgv-site .pgv-footer {
+    background: var(--pgv-ink);
+    color: rgba(255, 255, 255, 0.72);
+  }
+
+  .pgv-site .pgv-footer-main {
+    display: grid;
+    grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.75fr);
+    gap: 52px;
+    padding: 66px 0 54px;
+  }
+
+  .pgv-site .pgv-footer-brand {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 14px;
+    border-radius: 16px;
+    background: var(--pgv-paper);
+  }
+
+  .pgv-site .pgv-footer-brand .pgv-brand-logo {
+    width: 190px;
+  }
+
+  .pgv-site .pgv-footer-copy {
+    max-width: 470px;
+    margin: 19px 0 0;
+    font-size: 0.9rem;
+    line-height: 1.75;
+  }
+
+  .pgv-site .pgv-footer-links {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-content: start;
+    gap: 8px 24px;
+  }
+
+  .pgv-site .pgv-footer-links a {
+    display: inline-flex;
+    min-height: 40px;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 0.83rem;
+    font-weight: 600;
+    transition: color 0.2s ease;
+  }
+
+  .pgv-site .pgv-footer-links a:hover {
+    color: #f4c7b4;
+  }
+
+  .pgv-site .pgv-footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 21px 0 26px;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    font-size: 0.73rem;
+    line-height: 1.5;
+  }
+
+  .pgv-site .pgv-footer-legal {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px 20px;
+  }
+
+  .pgv-site .pgv-footer-legal a {
+    color: rgba(255, 255, 255, 0.84);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+  }
+
+  /* Responsive */
+  @media (max-width: 1080px) {
+    .pgv-site .pgv-header-inner {
+      min-height: 82px;
+    }
+
+    .pgv-site .pgv-nav-link {
+      padding-inline: 9px;
+      font-size: 0.84rem;
+    }
+
+    .pgv-site .pgv-hero-grid {
+      grid-template-columns: minmax(0, 1fr) minmax(340px, 0.82fr);
+      gap: 40px;
+    }
+
+    .pgv-site .pgv-hero-gallery {
+      min-height: 490px;
+    }
+
+    .pgv-site .pgv-category-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+
+  @media (max-width: 860px) {
+    .pgv-site .pgv-header-inner {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 17px 0 13px;
+    }
+
+    .pgv-site .pgv-nav {
+      width: 100%;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+
+    .pgv-site .pgv-nav::-webkit-scrollbar {
+      display: none;
+    }
+
+    .pgv-site .pgv-nav-list {
+      justify-content: flex-start;
+      width: max-content;
+    }
+
+    .pgv-site .pgv-hero {
+      padding-top: 64px;
+    }
+
+    .pgv-site .pgv-hero-grid {
+      grid-template-columns: 1fr;
+      gap: 58px;
+    }
+
+    .pgv-site .pgv-hero-copy {
+      max-width: 640px;
+    }
+
+    .pgv-site .pgv-hero-gallery {
+      width: min(100%, 610px);
+      min-height: 590px;
+      margin-inline: auto;
+    }
+
+    .pgv-site .pgv-trust-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .pgv-site .pgv-trust-item {
+      min-height: 84px;
+      border-right: 1px solid rgba(255, 255, 255, 0.13);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.13);
+    }
+
+    .pgv-site .pgv-trust-item:last-child {
+      border-bottom: 0;
+    }
+
+    .pgv-site .pgv-section-heading {
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .pgv-site .pgv-review-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .pgv-site .pgv-review-card:last-child {
+      grid-column: 1 / -1;
+    }
+
+    .pgv-site .pgv-review-card:last-child .pgv-review-image {
+      aspect-ratio: 16 / 8;
+    }
+
+    .pgv-site .pgv-footer-main {
+      grid-template-columns: 1fr;
+      gap: 28px;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .pgv-site .pgv-shell {
+      width: min(calc(100% - 28px), var(--pgv-shell));
+    }
+
+    .pgv-site .pgv-nav {
+      overflow: visible;
+    }
+
+    .pgv-site .pgv-nav-list {
+      width: 100%;
+      flex-wrap: wrap;
+      gap: 2px 4px;
+    }
+
+    .pgv-site .pgv-nav-link {
+      min-height: 40px;
+      padding: 7px 10px;
+      font-size: 0.8rem;
+    }
+
+    .pgv-site .pgv-brand-logo {
+      width: 174px;
+    }
+
+    .pgv-site .pgv-footer-brand .pgv-brand-logo {
+      width: 174px;
+    }
+
+    .pgv-site .pgv-hero {
+      padding-top: 48px;
+    }
+
+    .pgv-site .pgv-hero-title {
+      font-size: clamp(3rem, 14vw, 4.2rem);
+    }
+
+    .pgv-site .pgv-hero-copy {
+      font-size: 1rem;
+    }
+
+    .pgv-site .pgv-hero-actions {
+      align-items: stretch;
+      flex-direction: column;
+    }
+
+    .pgv-site .pgv-button {
+      width: 100%;
+    }
+
+    .pgv-site .pgv-proof {
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 7px;
+    }
+
+    .pgv-site .pgv-hero-gallery {
+      min-height: 440px;
+    }
+
+    .pgv-site .pgv-hero-main-image {
+      inset: 10% 5% 7% 2%;
+      border-width: 5px;
+    }
+
+    .pgv-site .pgv-hero-inset {
+      width: 42%;
+      right: 0;
+      bottom: 1%;
+      border-width: 5px;
+    }
+
+    .pgv-site .pgv-hero-note {
+      top: 4%;
+      left: 0;
+      max-width: 182px;
+      font-size: 0.72rem;
+    }
+
+    .pgv-site .pgv-hero-stamp {
+      width: 84px;
+      height: 84px;
+      top: 1%;
+    }
+
+    .pgv-site .pgv-hero-stamp span {
+      max-width: 60px;
+      font-size: 0.6rem;
+    }
+
+    .pgv-site .pgv-category-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 11px;
+    }
+
+    .pgv-site .pgv-category-card {
+      min-height: 222px;
+      padding: 20px;
+    }
+
+    .pgv-site .pgv-category-icon {
+      width: 47px;
+      height: 47px;
+      border-radius: 14px;
+    }
+
+    .pgv-site .pgv-category-icon svg {
+      width: 25px;
+      height: 25px;
+    }
+
+    .pgv-site .pgv-category-name {
+      margin-top: 22px;
+      font-size: 1.08rem;
+    }
+
+    .pgv-site .pgv-category-desc {
+      font-size: 0.75rem;
+    }
+
+    .pgv-site .pgv-review-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .pgv-site .pgv-review-card:last-child {
+      grid-column: auto;
+    }
+
+    .pgv-site .pgv-review-card:last-child .pgv-review-image {
+      aspect-ratio: 4 / 3;
+    }
+
+    .pgv-site .pgv-section {
+      padding-block: 78px;
+    }
+
+    .pgv-site .pgv-section-heading {
+      margin-bottom: 30px;
+    }
+
+    .pgv-site .pgv-footer-main {
+      padding-block: 50px 38px;
+    }
+
+    .pgv-site .pgv-footer-links {
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+
+    .pgv-site .pgv-footer-bottom {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+  }
+
+  @media (max-width: 390px) {
+    .pgv-site .pgv-category-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .pgv-site .pgv-category-card {
+      min-height: 190px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .pgv-site *,
+    .pgv-site *::before,
+    .pgv-site *::after {
+      scroll-behavior: auto !important;
+      transition-duration: 0.01ms !important;
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+    }
+  }
+</style>
+
+<div class="pgv-site" id="top">
+  <a class="pgv-skip-link" href="#pgv-main">Skip to main content</a>
+
+  <header class="pgv-header">
+    <div class="pgv-shell pgv-header-inner">
+      <a class="pgv-brand" href="/" aria-label="PawGearVerified home">
+        <img
+          class="pgv-brand-logo"
+          src="assets/pawgearverified-logo-web.png"
+          alt="PawGearVerified"
+          width="720"
+          height="261"
+        >
+      </a>
+
+      <nav class="pgv-nav" aria-label="Primary navigation">
+        <ul class="pgv-nav-list">
+          <li><a class="pgv-nav-link" href="/" aria-current="page">Home</a></li>
+          <li><a class="pgv-nav-link" href="#reviews">Reviews</a></li>
+          <li><a class="pgv-nav-link" href="/about/">About</a></li>
+          <li><a class="pgv-nav-link" href="/affiliate-disclosure/">Disclosure</a></li>
+          <li><a class="pgv-nav-link" href="/privacy-policy/">Privacy Policy</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="pgv-main">
+    <section class="pgv-hero" aria-labelledby="pgv-hero-title">
+      <div class="pgv-shell pgv-hero-grid">
+        <div class="pgv-hero-content">
+          <p class="pgv-eyebrow">Thoughtful reviews for real life with pets</p>
+          <h1 class="pgv-hero-title" id="pgv-hero-title">Good gear.<br><em>Happier moments.</em></h1>
+          <p class="pgv-hero-copy">
+            We put everyday pet hardware through real-world use, compare the details that matter, and share the tradeoffs clearly—so you can choose with confidence, not guesswork.
+          </p>
+          <div class="pgv-hero-actions">
+            <a class="pgv-button" href="#reviews">
+              Browse Reviews
+              <svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                <path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </div>
+          <div class="pgv-proof" aria-label="Editorial principles">
+            <span class="pgv-proof-item"><span class="pgv-proof-dot"></span>Hands-on testing</span>
+            <span class="pgv-proof-item"><span class="pgv-proof-dot"></span>Clear pros and cons</span>
+            <span class="pgv-proof-item"><span class="pgv-proof-dot"></span>Disclosed affiliate links</span>
+          </div>
+        </div>
+
+        <div class="pgv-hero-gallery" aria-label="Pets enjoying everyday life at home">
+          <div class="pgv-hero-main-image">
+            <!-- Replace with a PawGearVerified original pet-and-product photograph. -->
+            <img
+              src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&amp;fit=crop&amp;w=1200&amp;q=85"
+              alt="Two happy dogs enjoying time together outdoors"
+              width="1200"
+              height="900"
+              fetchpriority="high"
+            >
+          </div>
+          <div class="pgv-hero-note">
+            <span class="pgv-hero-note-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M12 20.1S4.2 15.5 4.2 9.6A4.6 4.6 0 0 1 12 6.4a4.6 4.6 0 0 1 7.8 3.2c0 5.9-7.8 10.5-7.8 10.5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <span>Practical picks for calmer, cleaner, happier days.</span>
+          </div>
+          <div class="pgv-hero-inset">
+            <img
+              src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?auto=format&amp;fit=crop&amp;w=520&amp;q=85"
+              alt="A relaxed cat resting comfortably at home"
+              width="520"
+              height="520"
+              loading="lazy"
+            >
+          </div>
+          <div class="pgv-hero-stamp" aria-hidden="true">
+            <span>Independent editorial judgment</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pgv-trust-strip" aria-label="How PawGearVerified works">
+      <div class="pgv-shell pgv-trust-grid">
+        <div class="pgv-trust-item">
+          <span class="pgv-trust-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M5 12.5 9.2 17 19 6.8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          <div><strong>Built around real use</strong><span>We look beyond the product page.</span></div>
+        </div>
+        <div class="pgv-trust-item">
+          <span class="pgv-trust-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M4 6.5h16M4 12h11M4 17.5h7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+              <circle cx="18" cy="12" r="2.5" stroke="currentColor" stroke-width="1.8"/>
+            </svg>
+          </span>
+          <div><strong>Details, not hype</strong><span>Clear strengths, limitations, and fit.</span></div>
+        </div>
+        <div class="pgv-trust-item">
+          <span class="pgv-trust-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M12 21s-7-4.4-7-10a4.1 4.1 0 0 1 7-2.9 4.1 4.1 0 0 1 7 2.9c0 5.6-7 10-7 10Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          <div><strong>Open about how we earn</strong><span>Affiliate links are always disclosed.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pgv-section pgv-categories" id="categories" aria-labelledby="pgv-categories-title">
+      <div class="pgv-shell">
+        <div class="pgv-section-heading">
+          <div>
+            <p class="pgv-section-kicker">Explore by category</p>
+            <h2 class="pgv-section-title" id="pgv-categories-title">Made for the messy, joyful everyday.</h2>
+            <p class="pgv-section-intro">Focused reviews of useful pet hardware—chosen for comfort, durability, and the way your home actually works.</p>
+          </div>
+          <a class="pgv-text-link" href="#reviews">
+            See the latest reviews
+            <svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
+              <path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+
+        <div class="pgv-category-grid">
+          <a class="pgv-category-card" href="/reviews/#grooming">
+            <span class="pgv-category-icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32" fill="none">
+                <path d="M20.6 5.6 26.4 11.4 15.9 21.9l-5.8-5.8L20.6 5.6Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+                <path d="m11.6 17.9-4.5 5.4-1.2 3.8 3.8-1.2 5.4-4.5M18.1 8.1l5.8 5.8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="m7.4 23.4 1.2 1.2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+              </svg>
+            </span>
+            <span class="pgv-category-name">Grooming Brushes</span>
+            <span class="pgv-category-desc">Comfort, coat fit, and easier cleanup.</span>
+          </a>
+
+          <a class="pgv-category-card" href="/reviews/#litter">
+            <span class="pgv-category-icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32" fill="none">
+                <rect x="4.5" y="8" width="23" height="16" rx="4" stroke="currentColor" stroke-width="1.8"/>
+                <path d="M8 12.5h3M13 12.5h3M18 12.5h3M23 12.5h1M8 17h1M11 17h3M16 17h3M21 17h3M8 21.5h3M13 21.5h3M18 21.5h3M23 21.5h1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+              </svg>
+            </span>
+            <span class="pgv-category-name">Litter Mats</span>
+            <span class="pgv-category-desc">Grip, trapping, and easy washing.</span>
+          </a>
+
+          <a class="pgv-category-card" href="/reviews/#chew">
+            <span class="pgv-category-icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32" fill="none">
+                <path d="M9.5 10.1a4 4 0 1 0-4.3 6.6 4 4 0 0 1 0 4.8 4 4 0 1 0 4.3 6.6c2.1-1.3 3-4.9 4.9-6.8l3.2-3.2c1.9-1.9 5.5-2.8 6.8-4.9a4 4 0 1 0-6.6-4.3 4 4 0 0 1-4.8 0 4 4 0 1 0-6.6 4.3c1.3 2.1 4.9 3 6.8 4.9l3.2 3.2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M9.3 16c2.6 1 6.9 1 9.8-.1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+              </svg>
+            </span>
+            <span class="pgv-category-name">Tough Chew Toys</span>
+            <span class="pgv-category-desc">Durability for strong, busy chewers.</span>
+          </a>
+
+          <a class="pgv-category-card" href="/reviews/#water">
+            <span class="pgv-category-icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32" fill="none">
+                <path d="M12 5h8v4l2 3v13a2 2 0 0 1-2 2h-8a2 2 0 0 1-2-2V12l2-3V5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+                <path d="M10 12h12M15.2 5V2.8h1.6V5M18 25l4.8-4.8a2.1 2.1 0 0 0-3-3L15 22" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <span class="pgv-category-name">Outdoor Water Bottles</span>
+            <span class="pgv-category-desc">Travel-ready fit and leak control.</span>
+          </a>
+
+          <a class="pgv-category-card" href="/reviews/#car">
+            <span class="pgv-category-icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32" fill="none">
+                <path d="m7 15 2.3-5.1A3 3 0 0 1 12 8h8a3 3 0 0 1 2.7 1.9L25 15M5 15h22v8H5v-8Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M9 23v3M23 23v3M9 19h2M21 19h2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                <path d="M14 11v6M18 11v6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+              </svg>
+            </span>
+            <span class="pgv-category-name">Car Safety Accessories</span>
+            <span class="pgv-category-desc">Fit, stability, and travel comfort.</span>
+          </a>
+
+          <a class="pgv-category-card" href="/reviews/#scratch">
+            <span class="pgv-category-icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32" fill="none">
+                <path d="M7 6h18v20H7V6Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+                <path d="m11 9 3 3m-3 4 3 3m-3 4 3 3m5-13 3 3m-3 4 3 3m-3 4 3 3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+              </svg>
+            </span>
+            <span class="pgv-category-name">Cat Scratching Boards</span>
+            <span class="pgv-category-desc">Stability, surface wear, and room fit.</span>
+          </a>
+
+          <a class="pgv-category-card" href="/reviews/#fence">
+            <span class="pgv-category-icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32" fill="none">
+                <path d="M5 9h22v17H5V9Zm7.3 0v17M19.7 9v17M5 17.5h22" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+                <path d="m5 9 3-4 3 4m3 0 3-4 3 4m3 0 3-4 3 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <span class="pgv-category-name">Fence Accessories</span>
+            <span class="pgv-category-desc">Anchors, connectors, and useful add-ons.</span>
+          </a>
+
+          <!-- Reserved slot for a future, approved hardware category. -->
+          <div class="pgv-category-card pgv-category-card--future" aria-label="More hardware categories coming soon">
+            <span class="pgv-category-icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32" fill="none">
+                <path d="M16 7v18M7 16h18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+              </svg>
+            </span>
+            <span class="pgv-category-name">More good gear, soon.</span>
+            <span class="pgv-category-desc">New hardware categories are added after they meet our review standards.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pgv-section pgv-reviews" id="reviews" aria-labelledby="pgv-reviews-title">
+      <div class="pgv-shell">
+        <div class="pgv-section-heading">
+          <div>
+            <p class="pgv-section-kicker">Latest reviews</p>
+            <h2 class="pgv-section-title" id="pgv-reviews-title">Fresh from the review bench.</h2>
+            <p class="pgv-section-intro">Practical findings, honest tradeoffs, and the context you need before adding something new to your pet-care routine.</p>
+          </div>
+          <a class="pgv-text-link" href="/reviews/">
+            View all reviews
+            <svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
+              <path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+
+        <div class="pgv-review-grid">
+          <!-- Article-card template: duplicate this article and update category, image, title, excerpt, and links. -->
+          <article class="pgv-review-card" data-article-card>
+            <a class="pgv-review-image" href="/reviews/#cat-brushes" aria-label="Read Best Cat Brushes for Long-Haired Cats">
+              <img
+                src="https://images.unsplash.com/photo-1573865526739-10659fec78a5?auto=format&amp;fit=crop&amp;w=760&amp;q=82"
+                alt="A long-haired cat resting in soft natural light"
+                width="760"
+                height="570"
+                loading="lazy"
+              >
+              <span class="pgv-review-tag">Grooming</span>
+            </a>
+            <div class="pgv-review-body">
+              <p class="pgv-review-meta">Roundup · 8 min read</p>
+              <h3 class="pgv-review-title">
+                <a href="/reviews/#cat-brushes">Best Cat Brushes for Long-Haired Cats</a>
+              </h3>
+              <p class="pgv-review-excerpt">Seven comfort-focused tools compared for coat type, grip, control, and everyday cleanup.</p>
+              <a class="pgv-text-link" href="/reviews/#cat-brushes">
+                Read full review
+                <svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                  <path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+              <!-- Optional affiliate CTA placement: use rel="sponsored nofollow noopener" and a nearby disclosure. -->
+            </div>
+          </article>
+
+          <article class="pgv-review-card" data-article-card>
+            <a class="pgv-review-image" href="/reviews/#litter" aria-label="Read Best Litter Mats for Messy Cats">
+              <img
+                src="https://images.unsplash.com/photo-1519052537078-e6302a4968d4?auto=format&amp;fit=crop&amp;w=760&amp;q=82"
+                alt="A curious cat standing comfortably indoors"
+                width="760"
+                height="570"
+                loading="lazy"
+              >
+              <span class="pgv-review-tag">Litter Mats</span>
+            </a>
+            <div class="pgv-review-body">
+              <p class="pgv-review-meta">Comparison · 7 min read</p>
+              <h3 class="pgv-review-title">
+                <a href="/reviews/#litter">Best Litter Mats for Messy Cats</a>
+              </h3>
+              <p class="pgv-review-excerpt">Six options compared for litter trapping, floor grip, washing, and the realities of daily cleanup.</p>
+              <a class="pgv-text-link" href="/reviews/#litter">
+                Read full review
+                <svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                  <path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+              <!-- Optional affiliate CTA placement: use rel="sponsored nofollow noopener" and a nearby disclosure. -->
+            </div>
+          </article>
+
+          <article class="pgv-review-card" data-article-card>
+            <a class="pgv-review-image" href="/reviews/#chew" aria-label="Read Best Tough Dog Chew Toys">
+              <img
+                src="https://images.unsplash.com/photo-1552053831-71594a27632d?auto=format&amp;fit=crop&amp;w=760&amp;q=82"
+                alt="A happy dog relaxing indoors with a calm, playful expression"
+                width="760"
+                height="570"
+                loading="lazy"
+              >
+              <span class="pgv-review-tag">Chew Toys</span>
+            </a>
+            <div class="pgv-review-body">
+              <p class="pgv-review-meta">Roundup · 9 min read</p>
+              <h3 class="pgv-review-title">
+                <a href="/reviews/#chew">Best Tough Dog Chew Toys for Strong Chewers</a>
+              </h3>
+              <p class="pgv-review-excerpt">Eight durable toys assessed for material wear, size fit, supervised play, and long-term value.</p>
+              <a class="pgv-text-link" href="/reviews/#chew">
+                Read full review
+                <svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                  <path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+              <!-- Optional affiliate CTA placement: use rel="sponsored nofollow noopener" and a nearby disclosure. -->
+            </div>
+          </article>
+        </div>
+
+        <p class="pgv-review-note">
+          <svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
+            <circle cx="10" cy="10" r="7.5" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M10 9v4.5M10 6.3v.2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+          </svg>
+          <span>Reader-supported: we may earn a commission when you buy through links on our site, at no extra cost to you. <a href="/affiliate-disclosure/">Read our affiliate disclosure.</a></span>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pgv-footer">
+    <div class="pgv-shell pgv-footer-main">
+      <div>
+        <a class="pgv-footer-brand" href="#top" aria-label="Back to top">
+          <img
+            class="pgv-brand-logo"
+            src="assets/pawgearverified-logo-web.png"
+            alt="PawGearVerified"
+            width="720"
+            height="261"
+            loading="lazy"
+          >
+        </a>
+        <p class="pgv-footer-copy">
+          Independent reviews of practical pet hardware, made for the way cats, dogs, and their people really live.
+        </p>
+      </div>
+      <nav class="pgv-footer-links" aria-label="Footer navigation">
+        <a href="/">Home</a>
+        <a href="#reviews">Reviews</a>
+        <a href="/about/">About</a>
+        <a href="#categories">Categories</a>
+        <a href="/affiliate-disclosure/">FTC Affiliate Disclosure</a>
+        <a href="/privacy-policy/">Privacy Policy</a>
+      </nav>
+    </div>
+    <div class="pgv-shell">
+      <div class="pgv-footer-bottom">
+        <span>© 2026 PawGearVerified. All rights reserved.</span>
+        <div class="pgv-footer-legal">
+          <a href="/affiliate-disclosure/">FTC Affiliate Disclosure</a>
+          <a href="/privacy-policy/">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+
+</body>
+</html>
