@@ -133,6 +133,36 @@
     }
     .product-review h3 { margin-bottom: 9px; font-size: clamp(1.35rem, 3vw, 1.85rem); }
     .product-review > p { color: var(--muted); }
+    .product-visual {
+      position: relative;
+      overflow: hidden;
+      margin: 0 0 22px;
+      border-radius: 18px;
+      aspect-ratio: 16 / 8;
+      background: var(--sand);
+    }
+    .product-visual img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.45s ease;
+    }
+    .product-review:hover .product-visual img { transform: scale(1.025); }
+    .product-visual figcaption {
+      position: absolute;
+      right: 12px;
+      bottom: 12px;
+      left: 12px;
+      width: fit-content;
+      max-width: calc(100% - 24px);
+      padding: 7px 10px;
+      border-radius: 9px;
+      background: rgba(48, 41, 37, 0.8);
+      color: #fff;
+      font-size: 0.66rem;
+      line-height: 1.35;
+      backdrop-filter: blur(8px);
+    }
     .product-rating {
       display: flex;
       flex-wrap: wrap;
@@ -180,21 +210,24 @@
       justify-content: center;
       margin-top: 8px;
       padding: 11px 19px;
+      border: 2px solid var(--terra);
       border-radius: 999px;
-      background: var(--terra);
-      color: #fff;
+      background: var(--paper);
+      color: #713925;
       font-size: 0.84rem;
       font-weight: 800;
       text-decoration: none;
+      box-shadow: 0 7px 18px rgba(80, 55, 43, 0.08);
     }
-    .buy-link:hover { background: #733b2b; }
-    .disclosure-box {
-      margin: 34px 0 0;
-      padding: 22px 24px;
-      border: 1px solid var(--line);
-      border-radius: 18px;
-      background: var(--paper);
-      font-size: 0.84rem;
+    .buy-link:hover { background: var(--sand); color: var(--ink); }
+    .commission-note {
+      margin: 0 0 28px;
+      padding: 12px 0;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.78rem;
+      line-height: 1.55;
     }
     @media (max-width: 720px) {
       .category-heading, .review-columns { grid-template-columns: 1fr; }
@@ -212,7 +245,6 @@
           <li><a href="/">Home</a></li>
           <li><a href="/reviews/" aria-current="page">Reviews</a></li>
           <li><a href="/about/">About</a></li>
-          <li><a href="/affiliate-disclosure/">Disclosure</a></li>
           <li><a href="/privacy-policy/">Privacy Policy</a></li>
         </ul>
       </nav>
@@ -252,6 +284,7 @@
           <p><strong>How this guide was built:</strong> We selected products with strong star ratings and substantial review histories, then cross-checked the listings’ stated materials, dimensions, use restrictions, and recurring areas of owner concern. We did not physically test every unit. Ratings and review counts were visible on Amazon US when checked on October 22, 2026; they can change.</p>
           <p><strong>About the images:</strong> The photographs below show representative cats and dogs in relevant lifestyle settings. They are not Amazon product photos. Product images should only be added through Amazon’s authorized Associate tools, such as SiteStripe or the Product Advertising API.</p>
         </div>
+        <p class="commission-note"><strong>Commission note:</strong> PawGearVerified may earn a commission from qualifying purchases made through links on this page, at no extra cost to you.</p>
 
         <section class="category-section" id="grooming">
           <div class="category-heading">
@@ -270,6 +303,10 @@
             <span class="product-kicker">Best all-round cat slicker</span>
             <h3>Aumuca Self-Cleaning Cat Brush</h3>
             <p class="product-rating"><strong>4.4 / 5</strong><span>38,673 ratings</span><span>ASIN B098P6164W</span></p>
+            <figure class="product-visual">
+              <img src="https://images.unsplash.com/photo-1496284427489-f59461d8a8e6?auto=format&fit=crop&w=1000&q=75" alt="A person gently holding a long-haired cat" width="1000" height="625" loading="lazy">
+              <figcaption>Representative lifestyle image; see the Amazon listing for the exact product.</figcaption>
+            </figure>
             <p>Aumuca’s brush combines rounded stainless-steel pins with a one-click pin-retraction system. The bent-pin shape is intended to reach through a longer coat, while the rounded tips reduce the scratchy feel of a conventional slicker. Its large review base and top-category sales position make it a sensible first place to look for a general-purpose cat brush.</p>
             <div class="review-columns">
               <section class="review-panel"><h4>What stands out</h4><ul><li>Rounded pins and a massage-oriented design.</li><li>One-button cleanup saves direct hand-pulling.</li><li>Works across several coat lengths, according to the listing.</li></ul></section>
@@ -284,6 +321,10 @@
             <span class="product-kicker">Best for dense double coats</span>
             <h3>Maxpower Planet Double-Sided Pet Grooming Rake</h3>
             <p class="product-rating"><strong>4.6 / 5</strong><span>60,114 ratings</span><span>ASIN B07P2N8HQH</span></p>
+            <figure class="product-visual">
+              <img src="https://images.unsplash.com/photo-1572344509481-0693a88366fb?auto=format&fit=crop&w=1000&q=75" alt="A white and tabby cat resting in soft light" width="1000" height="625" loading="lazy">
+              <figcaption>Representative lifestyle image; see the Amazon listing for the exact product.</figcaption>
+            </figure>
             <p>This is a two-stage undercoat tool: a nine-tooth side for heavier knots and a 17-tooth side for thinning and shedding. It is aimed at pets with thick or double coats, making it more specialized—and potentially more effective for that job—than a soft slicker brush.</p>
             <div class="review-columns">
               <section class="review-panel"><h4>What stands out</h4><ul><li>Two tooth densities in one tool.</li><li>Long reach into a dense undercoat.</li><li>Large, mature review history and a top-category sales position.</li></ul></section>
@@ -298,6 +339,10 @@
             <span class="product-kicker">Budget daily brush</span>
             <h3>Depets Self-Cleaning Slicker Brush</h3>
             <p class="product-rating"><strong>4.5 / 5</strong><span>22,828 ratings</span><span>ASIN B08FJ655HL</span></p>
+            <figure class="product-visual">
+              <img src="https://images.unsplash.com/photo-1747176779062-4e800093611e?auto=format&fit=crop&w=1000&q=75" alt="A person gently petting a gray cat" width="1000" height="625" loading="lazy">
+              <figcaption>Representative lifestyle image; see the Amazon listing for the exact product.</figcaption>
+            </figure>
             <p>Depets keeps the formula simple: a compact slicker head, rounded pins, a non-slip handle, and one-button hair release. It is a low-cost way to introduce regular grooming without committing to a larger specialized tool. The listing explicitly says it is not intended for curly, wire-haired, or hairless pets.</p>
             <div class="review-columns">
               <section class="review-panel"><h4>What stands out</h4><ul><li>Straightforward self-cleaning design.</li><li>Small head is useful around cheeks, shoulders, and legs.</li><li>Strong review volume for a budget-priced brush.</li></ul></section>
@@ -326,6 +371,10 @@
             <span class="product-kicker">Best balanced pick</span>
             <h3>Gorilla Grip Original Cat Litter Mat, 24 × 17 in</h3>
             <p class="product-rating"><strong>4.5 / 5</strong><span>51,000+ ratings across sizes</span><span>ASIN B07GYZPM94</span></p>
+            <figure class="product-visual">
+              <img src="https://images.unsplash.com/photo-1678710489074-33684e694a27?auto=format&fit=crop&w=1000&q=75" alt="A blue-eyed cat resting comfortably on a bed" width="1000" height="625" loading="lazy">
+              <figcaption>Representative lifestyle image; see the Amazon listing for the exact product.</figcaption>
+            </figure>
             <p>Gorilla Grip uses a soft, flexible mesh surface with deep grooves to catch scattered litter before it leaves the box area. The listing emphasizes phthalate-free material, easy vacuuming, rinsing, and a size that fits many standard bathroom or utility-room setups.</p>
             <div class="review-columns">
               <section class="review-panel"><h4>What stands out</h4><ul><li>Deep mesh offers more trapping area than a flat rug.</li><li>Soft surface is easier on paws than rigid plastic.</li><li>Simple vacuum or rinse maintenance.</li></ul></section>
@@ -340,6 +389,10 @@
             <span class="product-kicker">High-volume favorite</span>
             <h3>Pieviev Double-Layer Litter Trapping Mat</h3>
             <p class="product-rating"><strong>4.4 / 5</strong><span>74,000+ ratings</span><span>ASIN B07NJ5SR5G</span></p>
+            <figure class="product-visual">
+              <img src="https://images.unsplash.com/photo-1708758481118-5a0a021e3294?auto=format&fit=crop&w=1000&q=75" alt="A cat resting on a textured mat" width="1000" height="625" loading="lazy">
+              <figcaption>Representative lifestyle image; see the Amazon listing for the exact product.</figcaption>
+            </figure>
             <p>Pieviev’s design uses a two-layer construction intended to let loose litter fall below the walking surface. It has one of the largest review bases in this category, and its 24 × 15-inch size makes it easy to position in tighter spaces.</p>
             <div class="review-columns">
               <section class="review-panel"><h4>What stands out</h4><ul><li>Two-layer trapping concept keeps recovered litter below the paws.</li><li>Easy to pick up and shake clean.</li><li>Compact footprint compared with extra-large mats.</li></ul></section>
@@ -354,6 +407,10 @@
             <span class="product-kicker">Large waterproof value</span>
             <h3>Amazon Basics Less Mess Cat Litter Mat, 24 × 35 in</h3>
             <p class="product-rating"><strong>4.5 / 5</strong><span>20,000+ ratings</span><span>ASIN B072569V1L</span></p>
+            <figure class="product-visual">
+              <img src="https://images.unsplash.com/photo-1780590108081-b635bae60625?auto=format&fit=crop&w=1000&q=75" alt="A tabby and white cat resting on a dark mat" width="1000" height="625" loading="lazy">
+              <figcaption>Representative lifestyle image; see the Amazon listing for the exact product.</figcaption>
+            </figure>
             <p>The Amazon Basics mat trades a complex trapping grid for a large, soft-paw surface and a waterproof backing. Its 24 × 35-inch footprint is useful when litter is kicked forward from the box rather than tracked in one narrow path.</p>
             <div class="review-columns">
               <section class="review-panel"><h4>What stands out</h4><ul><li>Substantial coverage for the price.</li><li>Waterproof backing helps protect hard floors.</li><li>Simple, neutral design fits most laundry rooms and bathrooms.</li></ul></section>
@@ -382,6 +439,10 @@
             <span class="product-kicker">Most established pick</span>
             <h3>KONG Extreme Dog Toy, Large</h3>
             <p class="product-rating"><strong>4.6 / 5</strong><span>32,000+ ratings</span><span>ASIN B0002AR0II</span></p>
+            <figure class="product-visual">
+              <img src="https://images.unsplash.com/photo-1535294435445-d7249524ef2e?auto=format&fit=crop&w=1000&q=75" alt="A durable rubber chew toy on a teal surface" width="1000" height="625" loading="lazy">
+              <figcaption>Representative lifestyle image; see the Amazon listing for the exact product.</figcaption>
+            </figure>
             <p>KONG Extreme is the benchmark shape many owners recognize: a thick natural-rubber shell with an irregular bounce and a hollow center. The black Extreme line is intended for dogs with stronger chewing behavior than KONG’s softer red line.</p>
             <div class="review-columns">
               <section class="review-panel"><h4>What stands out</h4><ul><li>Simple, proven rubber design with no small electronic parts.</li><li>Hollow center adds flexibility in how the toy is used.</li><li>Easy to inspect and rinse.</li></ul></section>
@@ -396,6 +457,10 @@
             <span class="product-kicker">Best high-energy option</span>
             <h3>KONG Extreme Ball with Hole, Large</h3>
             <p class="product-rating"><strong>4.7 / 5</strong><span>21,000+ ratings</span><span>ASIN B0DVLXW7CR</span></p>
+            <figure class="product-visual">
+              <img src="https://images.unsplash.com/photo-1722257401181-a04cc4df36f8?auto=format&fit=crop&w=1000&q=75" alt="Two dogs playing with a ball outdoors" width="1000" height="625" loading="lazy">
+              <figcaption>Representative lifestyle image; see the Amazon listing for the exact product.</figcaption>
+            </figure>
             <p>This ball brings KONG’s black Extreme rubber into a bouncing, rolling format. The hole creates a different shape for a dog to carry and interact with, and the round design is useful for active play that keeps a strong chewer moving.</p>
             <div class="review-columns">
               <section class="review-panel"><h4>What stands out</h4><ul><li>High rating across a large review base.</li><li>Durable rubber plus active rolling play.</li><li>Simple shape is easy to clean and inspect.</li></ul></section>
@@ -410,6 +475,10 @@
             <span class="product-kicker">Long-lasting bone shape</span>
             <h3>SPOT Bam-Bones Plus T-Bone Nylon Chew, 6-inch</h3>
             <p class="product-rating"><strong>4.5 / 5</strong><span>10,000+ ratings</span><span>ASIN B07RYB63DC</span></p>
+            <figure class="product-visual">
+              <img src="https://images.unsplash.com/photo-1589924749359-9697080c3577?auto=format&fit=crop&w=1000&q=75" alt="A dog resting calmly on a floor" width="1000" height="625" loading="lazy">
+              <figcaption>Representative lifestyle image; see the Amazon listing for the exact product.</figcaption>
+            </figure>
             <p>The Bam-Bones Plus T-Bone is aimed at dogs in the 30–60 pound range. Its rigid nylon construction and familiar bone shape make it a distinct alternative to flexible rubber, particularly for dogs that prefer a firm surface.</p>
             <div class="review-columns">
               <section class="review-panel"><h4>What stands out</h4><ul><li>Firm nylon construction resists easy compression.</li><li>T-bone shape is easy for a dog to hold.</li><li>Straightforward to rinse and inspect.</li></ul></section>
@@ -438,6 +507,10 @@
             <span class="product-kicker">Simple 19-ounce pick</span>
             <h3>Kalimdor Portable Dog Water Bottle, 19 oz</h3>
             <p class="product-rating"><strong>4.4 / 5</strong><span>8,406 ratings</span><span>ASIN B089W25KG3</span></p>
+            <figure class="product-visual">
+              <img src="https://images.unsplash.com/photo-1541887796712-054f4b0f8e5d?auto=format&fit=crop&w=1000&q=75" alt="A dog drinking from a portable water dispenser" width="1000" height="625" loading="lazy">
+              <figcaption>Representative lifestyle image; see the Amazon listing for the exact product.</figcaption>
+            </figure>
             <p>Kalimdor’s bottle combines a water reservoir with a fold-out drinking section. The 19-ounce capacity is useful for longer walks, while its plastic body keeps the package lighter than a metal bottle. The listing emphasizes leak-resistant travel use for walks, hiking, and car trips.</p>
             <div class="review-columns">
               <section class="review-panel"><h4>What stands out</h4><ul><li>Useful capacity without a bulky travel bowl.</li><li>Integrated drinking trough.</li><li>Popular choice with a broad review base.</li></ul></section>
@@ -452,6 +525,10 @@
             <span class="product-kicker">Compact travel alternative</span>
             <h3>SOICTA Portable Dog Water Bottle</h3>
             <p class="product-rating"><strong>4.3 / 5</strong><span>5,762 ratings</span><span>ASIN B098KBJNMH</span></p>
+            <figure class="product-visual">
+              <img src="https://images.unsplash.com/photo-1645633356840-4fb80116086f?auto=format&fit=crop&w=1000&q=75" alt="A person relaxing with a black dog" width="1000" height="625" loading="lazy">
+              <figcaption>Representative lifestyle image; see the Amazon listing for the exact product.</figcaption>
+            </figure>
             <p>SOICTA offers a straightforward portable bottle in 12- or 19-ounce formats. It is aimed at people who want a lighter travel item with an integrated drinking surface and no separate bowl to keep track of.</p>
             <div class="review-columns">
               <section class="review-panel"><h4>What stands out</h4><ul><li>Available in smaller and larger capacities.</li><li>Compact all-in-one design.</li><li>Simple exterior is easy to wipe down.</li></ul></section>
@@ -466,6 +543,10 @@
             <span class="product-kicker">Rugged large-capacity pick</span>
             <h3>PupFlask Large Dog Water Bottle</h3>
             <p class="product-rating"><strong>4.4 / 5</strong><span>7,719 ratings</span><span>ASIN B07C79KZLL</span></p>
+            <figure class="product-visual">
+              <img src="https://images.unsplash.com/photo-1776806014995-46e72a882a8f?auto=format&fit=crop&w=1000&q=75" alt="A person walking a dog on an outdoor path" width="1000" height="625" loading="lazy">
+              <figcaption>Representative lifestyle image; see the Amazon listing for the exact product.</figcaption>
+            </figure>
             <p>PupFlask uses a stainless-steel bottle body and a travel bowl attachment for larger dogs or longer excursions. It is less compact than a plastic bottle-and-trough design, but the materials and capacity make it a sturdier option for organized hikes and road trips.</p>
             <div class="review-columns">
               <section class="review-panel"><h4>What stands out</h4><ul><li>Stainless-steel bottle body.</li><li>Larger travel format for long outings.</li><li>Separate bowl arrangement supports an organized water stop.</li></ul></section>
@@ -494,6 +575,10 @@
             <span class="product-kicker">Best all-round crash-tested harness</span>
             <h3>Kurgo Tru-Fit Enhanced Strength Dog Harness</h3>
             <p class="product-rating"><strong>4.3 / 5</strong><span>7,869 ratings</span><span>ASIN B09S3XBR18</span></p>
+            <figure class="product-visual">
+              <img src="https://images.unsplash.com/photo-1559190394-df5a28aab5c5?auto=format&fit=crop&w=1000&q=75" alt="A dog enjoying the breeze from a car window" width="1000" height="625" loading="lazy">
+              <figcaption>Representative lifestyle image; see the Amazon listing for the exact product.</figcaption>
+            </figure>
             <p>Kurgo’s harness uses a five-point adjustment system, padded chest plate, steel hardware, and an included seat-belt tether. The manufacturer describes it as crash-tested for dogs up to 75 pounds in the relevant size range. Extensive adjustment helps, but it also means correct fitting takes time.</p>
             <div class="review-columns">
               <section class="review-panel"><h4>What stands out</h4><ul><li>Five adjustment points for a closer fit.</li><li>Padded chest area and metal connection hardware.</li><li>Works as a walking harness as well as a travel restraint.</li></ul></section>
@@ -508,6 +593,10 @@
             <span class="product-kicker">Dedicated crash-tested harness</span>
             <h3>CarSafe Crash Tested Dog Safety Harness</h3>
             <p class="product-rating"><strong>4.1 / 5</strong><span>1,105 ratings</span><span>ASIN B00CD6D8JO</span></p>
+            <figure class="product-visual">
+              <img src="https://images.unsplash.com/photo-1578346693440-3dcedf4b7b81?auto=format&fit=crop&w=1000&q=75" alt="A dog leaning against a car window" width="1000" height="625" loading="lazy">
+              <figcaption>Representative lifestyle image; see the Amazon listing for the exact product.</figcaption>
+            </figure>
             <p>CarSafe is built specifically as a padded safety harness rather than a walking-first design. The listing states crash testing for dogs up to roughly 70 pounds, with multiple sizes and a padded structure. Its lower rating than the category’s simple tethers is a reminder that fit and installation can be more demanding.</p>
             <div class="review-columns">
               <section class="review-panel"><h4>What stands out</h4><ul><li>Dedicated safety-harness design.</li><li>Padded structure for travel comfort.</li><li>Multiple sizes with published crash-test weight claims.</li></ul></section>
@@ -522,6 +611,10 @@
             <span class="product-kicker">High-rated compact restraint</span>
             <h3>EzyDog Click Dog Car Seat Belt Restraint</h3>
             <p class="product-rating"><strong>4.5 / 5</strong><span>572 ratings</span><span>ASIN B00BS98JX2</span></p>
+            <figure class="product-visual">
+              <img src="https://images.unsplash.com/photo-1510020553968-30f966e1ec9e?auto=format&fit=crop&w=1000&q=75" alt="A small dog sitting inside a vehicle" width="1000" height="625" loading="lazy">
+              <figcaption>Representative lifestyle image; see the Amazon listing for the exact product.</figcaption>
+            </figure>
             <p>EzyDog Click is a seat-belt restraint designed to connect a dog’s harness to the vehicle buckle. Its adjustable length is intended to allow comfortable sitting or lying down without letting the dog roam around the cabin. This is a restraint accessory, not a standalone harness.</p>
             <div class="review-columns">
               <section class="review-panel"><h4>What stands out</h4><ul><li>Compact format with a high share of positive ratings.</li><li>Adjustable range for different seating positions.</li><li>Quick to install and remove.</li></ul></section>
@@ -550,6 +643,10 @@
             <span class="product-kicker">Best multi-pack value</span>
             <h3>Kitty City XL 3-Pack Corrugated Cat Scratchers</h3>
             <p class="product-rating"><strong>4.7 / 5</strong><span>21,000+ ratings</span><span>ASIN B01MZG54L6</span></p>
+            <figure class="product-visual">
+              <img src="https://images.unsplash.com/photo-1545249390-6bdfa286032f?auto=format&fit=crop&w=1000&q=75" alt="A gray cat beside a scratching post" width="1000" height="625" loading="lazy">
+              <figcaption>Representative lifestyle image; see the Amazon listing for the exact product.</figcaption>
+            </figure>
             <p>Kitty City sells three large corrugated boards that can be spread through the home or layered for more scratching area. Double-sided surfaces extend useful life, and the familiar wave texture is easy for most cats to understand immediately.</p>
             <div class="review-columns">
               <section class="review-panel"><h4>What stands out</h4><ul><li>Three boards make strategic placement easier.</li><li>Double-sided corrugated surfaces.</li><li>Very large review base and high star rating.</li></ul></section>
@@ -564,6 +661,10 @@
             <span class="product-kicker">Simple replacement pack</span>
             <h3>Amazon Basics Corrugated Cat Scratching Board, 4-Pack</h3>
             <p class="product-rating"><strong>4.7 / 5</strong><span>1,436 ratings</span><span>ASIN B0BDL3X9G8</span></p>
+            <figure class="product-visual">
+              <img src="https://images.unsplash.com/photo-1759165440303-40ef25cc6053?auto=format&fit=crop&w=1000&q=75" alt="A Siamese cat stretching against furniture" width="1000" height="625" loading="lazy">
+              <figcaption>Representative lifestyle image; see the Amazon listing for the exact product.</figcaption>
+            </figure>
             <p>Amazon Basics keeps the purchase uncomplicated: four compact corrugated boards with double-sided usable surfaces. The smaller format is helpful for apartments and for placing next to furniture a cat already targets.</p>
             <div class="review-columns">
               <section class="review-panel"><h4>What stands out</h4><ul><li>Four boards for flexible placement or replacement.</li><li>Double-sided wear surface.</li><li>Clean, neutral appearance.</li></ul></section>
@@ -578,6 +679,10 @@
             <span class="product-kicker">Large single-board pick</span>
             <h3>EHEYCIGA Cardboard Cat Scratcher, 26.8-inch</h3>
             <p class="product-rating"><strong>4.5 / 5</strong><span>3,969 ratings</span><span>ASIN B0D4VDDQV3</span></p>
+            <figure class="product-visual">
+              <img src="https://images.unsplash.com/photo-1625241589108-d4ceb8dbcc4d?auto=format&fit=crop&w=1000&q=75" alt="A calico cat resting in a wicker basket" width="1000" height="625" loading="lazy">
+              <figcaption>Representative lifestyle image; see the Amazon listing for the exact product.</figcaption>
+            </figure>
             <p>This long corrugated board gives a cat enough horizontal length for a full stretch. The larger surface can make it more satisfying than a compact pad, especially for cats that prefer to dig in and pull with their front claws.</p>
             <div class="review-columns">
               <section class="review-panel"><h4>What stands out</h4><ul><li>Extra-long scratching surface.</li><li>Good fit for a living-room scratching station.</li><li>Simple construction with no setup complexity.</li></ul></section>
@@ -606,6 +711,10 @@
             <span class="product-kicker">Best stability upgrade</span>
             <h3>FXW Fence-to-Wall Anchor, 4-Pack</h3>
             <p class="product-rating"><strong>4.7 / 5</strong><span>514 ratings</span><span>ASIN B0CD841FW4</span></p>
+            <figure class="product-visual">
+              <img src="https://images.unsplash.com/photo-1682704406081-fa82652f1292?auto=format&fit=crop&w=1000&q=75" alt="A small dog standing at a backyard gate" width="1000" height="625" loading="lazy">
+              <figcaption>Representative lifestyle image; see the Amazon listing for the exact product.</figcaption>
+            </figure>
             <p>FXW’s wall anchors are designed to stabilize compatible dog playpens by connecting a fence panel to an interior or exterior wall. They are a focused accessory for households where a freestanding panel arrangement shifts or leaves an unwanted gap.</p>
             <div class="review-columns">
               <section class="review-panel"><h4>What stands out</h4><ul><li>Strong rating within a specialized niche.</li><li>Adds a fixed reference point for a freestanding fence.</li><li>Four-piece pack supports a practical corner layout.</li></ul></section>
@@ -620,6 +729,10 @@
             <span class="product-kicker">Buried-wire repair kit</span>
             <h3>Extreme Dog Fence Wire Splice Kit, 10-Pack</h3>
             <p class="product-rating"><strong>4.6 / 5</strong><span>125 ratings</span><span>ASIN B08VNKTD1Z</span></p>
+            <figure class="product-visual">
+              <img src="https://images.unsplash.com/photo-1707178337303-dd825f603a3e?auto=format&fit=crop&w=1000&q=75" alt="A secure fenced yard" width="1000" height="625" loading="lazy">
+              <figcaption>Representative lifestyle image; see the Amazon listing for the exact product.</figcaption>
+            </figure>
             <p>This kit is for repairing or joining buried fence wire with a waterproof connection. It is a narrow maintenance product rather than a training device: the useful questions are wire compatibility, splice quality, and whether the repaired line restores the system correctly.</p>
             <div class="review-columns">
               <section class="review-panel"><h4>What stands out</h4><ul><li>Ten splices provide spare repair coverage.</li><li>Designed for direct-burial use.</li><li>Strong feedback among a limited buyer pool.</li></ul></section>
@@ -634,6 +747,10 @@
             <span class="product-kicker">Panel clip multipack</span>
             <h3>WRINGKIT Dog Kennel Clips, 10-Pack</h3>
             <p class="product-rating"><strong>4.6 / 5</strong><span>95 ratings</span><span>ASIN B0D926L1ZR</span></p>
+            <figure class="product-visual">
+              <img src="https://images.unsplash.com/photo-1664549042484-e08b2f76799c?auto=format&fit=crop&w=1000&q=75" alt="A dog standing safely inside a fenced area" width="1000" height="625" loading="lazy">
+              <figcaption>Representative lifestyle image; see the Amazon listing for the exact product.</figcaption>
+            </figure>
             <p>WRINGKIT’s clips are small chain-link fence panel fasteners intended to join or secure compatible panels. They are the kind of low-cost hardware that is easy to overlook until a gap or loose panel becomes a safety problem.</p>
             <div class="review-columns">
               <section class="review-panel"><h4>What stands out</h4><ul><li>Ten-piece pack supports several connection points.</li><li>Compact, non-electronic hardware with little to fail.</li><li>Useful for maintenance and reconfiguration.</li></ul></section>
@@ -648,10 +765,6 @@
         <section>
           <h2>Final buying notes</h2>
           <p>High ratings are a useful starting point, not proof that a product will suit your pet. For grooming tools, coat type matters. For litter mats, fit matters. For chew toys and car restraints, the correct size and supervision matter even more. Check the current listing before buying because product versions, dimensions, prices, availability, and rating counts can change.</p>
-          <div class="disclosure-box">
-            <p><strong>Affiliate disclosure:</strong> PawGearVerified may earn a commission from qualifying purchases made through links on this page, at no extra cost to you. Our editorial selection is independent of compensation. Amazon prices and availability can change after publication.</p>
-            <p><a href="/affiliate-disclosure/">Read the full affiliate disclosure.</a></p>
-          </div>
         </section>
       </article>
     </div>
@@ -664,10 +777,10 @@
         <p class="footer-copy">Independent reviews of practical pet hardware, made for the way cats, dogs, and their people really live.</p>
       </div>
       <nav class="footer-links" aria-label="Footer navigation">
-        <a href="/">Home</a><a href="/reviews/">Reviews</a><a href="/about/">About</a><a href="/affiliate-disclosure/">FTC Affiliate Disclosure</a><a href="/privacy-policy/">Privacy Policy</a>
+        <a href="/">Home</a><a href="/reviews/">Reviews</a><a href="/about/">About</a><a href="/affiliate-disclosure/">How We Make Money</a><a href="/privacy-policy/">Privacy Policy</a>
       </nav>
     </div>
-    <div class="shell footer-bottom"><span>© 2026 PawGearVerified. All rights reserved.</span><a href="/affiliate-disclosure/">FTC Affiliate Disclosure</a></div>
+    <div class="shell footer-bottom"><span>© 2026 PawGearVerified. All rights reserved.</span><a href="/affiliate-disclosure/">How We Make Money</a></div>
   </footer>
 </body>
 </html>
